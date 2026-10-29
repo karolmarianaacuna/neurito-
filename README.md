@@ -2,6 +2,20 @@
 
 Neurito es una mascota que aprende a escoger una acción según tres valores: hambre, energía y aburrimiento. La red aprende cuatro acciones: comer, dormir, jugar y morir.
 
+## Capturas
+
+Estado neutral:
+
+![Neurito en estado neutral](screenshots/neurito-neutral-1.png)
+
+Otra imagen del estado neutral:
+
+![Neurito en estado neutral, otra pose](screenshots/neurito-neutral-2.png)
+
+Estado de muerte aprendido por la red, con las tres necesidades en nivel crítico:
+
+![Neurito en estado morir](screenshots/neurito-morir.png)
+
 ## ¿Cómo aprende la acción «morir»?
 
 En `main.py`, `label_policy` asigna la etiqueta **morir** cuando hambre, energía y aburrimiento están en 15% o menos. Además de los 3000 ejemplos aleatorios, el entrenamiento agrega 300 ejemplos de esa zona crítica. Así la red ve suficientes casos para aprender la cuarta salida. La imagen `assets/morir.png` solo representa la acción; no se usa para entrenar.
