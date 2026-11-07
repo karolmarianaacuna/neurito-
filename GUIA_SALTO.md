@@ -66,6 +66,4 @@ No se necesitan dependencias nuevas: se reutilizan NumPy y Pygame.
 
 **Pregunta central:** ¿por qué una red puede clasificar ejemplos con buena precisión y aun así chocar?
 
-**Respuesta sencilla:** la red practica con ejemplos y aprende a contestar según ellos. La precisión nos dice cuántas respuestas acertó en la prueba, pero no garantiza que vaya a saltar a tiempo en el juego.
-
-Es como estudiar para un examen con ejercicios de práctica: puedes resolver muchos bien y aun así equivocarte en una pregunta distinta. En el juego, un error justo cuando se acerca el obstáculo puede causar un choque. Por eso también hay que jugar y contar los choques y los obstáculos esquivados.
+**Respuesta:** la precisión mide cuántas veces la red reproduce las etiquetas del conjunto de prueba; no mide directamente cuántos obstáculos esquiva en el juego. Las etiquetas simplifican la decisión a una ventana de tiempo estimado, mientras que una colisión depende también del momento exacto del salto, la velocidad, la duración del salto y las dimensiones del jugador y del obstáculo. Además, una red puede equivocarse justo en los pocos fotogramas críticos aunque acierte la mayoría de los ejemplos. Por eso hay que observar las colisiones y los obstáculos esquivados en el juego, además de comparar la pérdida y la precisión.
