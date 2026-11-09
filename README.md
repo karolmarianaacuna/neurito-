@@ -67,3 +67,13 @@ Si una acción aparece mucho más que las demás, el modelo puede acertar bastan
 ## Usar el programa
 
 Ejecuta `python main.py` desde esta carpeta. En la ventana, usa `H`/`J` para subir o bajar hambre, `E`/`D` para energía, `A`/`S` para aburrimiento, `R` para generar valores aleatorios, `N` para volver al estado tranquilo y `Esc` para salir.
+
+## Neurito 3.0: laberinto
+
+Se agreg? una tercera experiencia independiente: Neurito aprende a buscar comida en tres laberintos mediante aprendizaje supervisado con ejemplos generados por BFS. La interfaz permite comparar la decisi?n de la red pura con un modo asistido que evita paredes y penaliza casillas visitadas. La asistencia usa reglas adicionales y no forma parte de lo aprendido por la red.
+
+- Ejecutar: `uv run laberinto.py`
+- Gu?a, controles y alcance: [GUIA_LABERINTO.md](GUIA_LABERINTO.md)
+- Pruebas automatizadas: `uv run python -m unittest -v test_laberinto.py`
+
+Los m?dulos `laberinto_mundo.py` y `laberinto_red.py` implementan el mundo y el modelo. El juego reutiliza los sprites neutrales existentes en `assets/`; no requiere dependencias nuevas.
